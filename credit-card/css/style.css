@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cousine", monospace;
+    color: var(--color-white-700);
+    text-transform: uppercase;
+}
+
+:root {
+    --bg-blue: #080C3A;
+    --color-white-500: rgba(255, 255, 255, 0.5);
+    --color-white-600: rgba(255, 255, 255, 0.66);
+    --color-white-700: rgba(255, 255, 255, 0.70);
+    --color-white-800: rgba(255, 255, 255, 0.77);
+
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-blue);
+}
+
+.cartao {
+    background-color: var(--color-white-1000);
+    width: 470px;
+    border: #ffffff 2px inset;
+    border-radius: 25px;
+    padding: 44px 32px;
+    padding-bottom: 32px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.01));
+    backdrop-filter: blur(25px);
+
+    & .logo-empresa {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 90px;
+
+        & p {
+            font-size: 18px;
+        }
+    }
+
+    & .dados {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        & p {
+            font-size: 24px;
+        }
+
+        & .nome-validade {
+            display: flex;
+            justify-content: space-between;
+            color: var(--color-white-500);
+
+            & p:first-child {
+                color: var(--color-white-500);
+                font-size: 18px;
+            }
+
+            & p:last-child {
+                color: var(--color-white-500);
+                font-size: 14px;
+            }
+
+
+        }
+    }
+}
+#circulo1 {
+    position: absolute;
+    z-index: -1;
+    right: 300px;
+    bottom: 60px;
+    animation: flutuar 5s infinite alternate-reverse;
+}
+@keyframes flutuar {
+    0%{
+transform: translateX(30px) ;
+    }
+    50%{
+       transform: translatey(30px); 
+    }
+    100%{
+transform: translateX(-30px);
+    }
+}
